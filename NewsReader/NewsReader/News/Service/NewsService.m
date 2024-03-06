@@ -55,8 +55,10 @@
                 
                 // Create NewsFeed object
                 NewsFeed *newsFeed = [[NewsFeed alloc] initWithTitle:title imageURL:imageURLString contentURL:contentURLString publishedDate:publishedDate];
-                
-                [newsFeeds addObject:newsFeed];
+                // Added a failsafe here
+                if (newsFeed != nil) {
+                    [newsFeeds addObject:newsFeed];
+                }
             }
         } else {
             NSLog(@"Failed to load data from news.json");

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B05B49722B98EEF00094F3A4 /* NewsFeedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B05B49712B98EEF00094F3A4 /* NewsFeedTests.m */; };
+		B05B49742B9900FF0094F3A4 /* ImageDownloaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B05B49732B9900FF0094F3A4 /* ImageDownloaderTests.m */; };
+		B05B49762B9905C00094F3A4 /* invalidMockNews.json in Resources */ = {isa = PBXBuildFile; fileRef = B05B49752B9905C00094F3A4 /* invalidMockNews.json */; };
+		B05B49772B9905C70094F3A4 /* invalidMockNews.json in Resources */ = {isa = PBXBuildFile; fileRef = B05B49752B9905C00094F3A4 /* invalidMockNews.json */; };
 		B0A34FD62B9845F8000B76BB /* NewsService.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A34FD52B9845F8000B76BB /* NewsService.m */; };
 		B0A34FD82B9848E9000B76BB /* NewsServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A34FD72B9848E9000B76BB /* NewsServiceTests.m */; };
 		B0EEE57C2B972CBC00AC6AFA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EEE57B2B972CBC00AC6AFA /* AppDelegate.m */; };
@@ -49,6 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B05B49712B98EEF00094F3A4 /* NewsFeedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsFeedTests.m; sourceTree = "<group>"; };
+		B05B49732B9900FF0094F3A4 /* ImageDownloaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageDownloaderTests.m; sourceTree = "<group>"; };
+		B05B49752B9905C00094F3A4 /* invalidMockNews.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = invalidMockNews.json; sourceTree = "<group>"; };
 		B0A34FD42B9845F8000B76BB /* NewsService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsService.h; sourceTree = "<group>"; };
 		B0A34FD52B9845F8000B76BB /* NewsService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsService.m; sourceTree = "<group>"; };
 		B0A34FD72B9848E9000B76BB /* NewsServiceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsServiceTests.m; sourceTree = "<group>"; };
@@ -165,9 +172,12 @@
 		B0EEE5952B972CBD00AC6AFA /* NewsReaderTests */ = {
 			isa = PBXGroup;
 			children = (
+				B05B49752B9905C00094F3A4 /* invalidMockNews.json */,
 				B0EEE5D32B97B1C200AC6AFA /* mockNews.json */,
 				B0EEE5D12B97AEFE00AC6AFA /* NewsViewModelTests.m */,
 				B0A34FD72B9848E9000B76BB /* NewsServiceTests.m */,
+				B05B49712B98EEF00094F3A4 /* NewsFeedTests.m */,
+				B05B49732B9900FF0094F3A4 /* ImageDownloaderTests.m */,
 			);
 			path = NewsReaderTests;
 			sourceTree = "<group>";
@@ -359,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0EEE58A2B972CBD00AC6AFA /* LaunchScreen.storyboard in Resources */,
+				B05B49772B9905C70094F3A4 /* invalidMockNews.json in Resources */,
 				B0EEE5872B972CBD00AC6AFA /* Assets.xcassets in Resources */,
 				B0EEE5C52B9779F200AC6AFA /* NewsFeedTableViewCell.xib in Resources */,
 				B0EEE5B32B972F2000AC6AFA /* news.json in Resources */,
@@ -371,6 +382,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B05B49762B9905C00094F3A4 /* invalidMockNews.json in Resources */,
 				B0EEE5D62B97B50600AC6AFA /* mockNews.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +419,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0A34FD82B9848E9000B76BB /* NewsServiceTests.m in Sources */,
+				B05B49722B98EEF00094F3A4 /* NewsFeedTests.m in Sources */,
+				B05B49742B9900FF0094F3A4 /* ImageDownloaderTests.m in Sources */,
 				B0EEE5D22B97AEFE00AC6AFA /* NewsViewModelTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,6 +12,7 @@
 @interface NewsServiceTests : XCTestCase
 
 @property (nonatomic, strong) NewsService *newsService;
+@property (nonatomic, strong) NewsService *newsServiceWithInvalidJSON;
 
 @end
 
@@ -20,11 +21,13 @@
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.
     self.newsService = [[NewsService alloc] initWithFileName:@"mockNews"];
+    self.newsServiceWithInvalidJSON = [[NewsService alloc] initWithFileName:@"invalidMockNews"];
 }
 
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     self.newsService = nil;
+    self.newsServiceWithInvalidJSON = nil;
 }
 
 - (void)testLoadNewsFromJSONFile {
@@ -38,6 +41,16 @@
         XCTAssertNotNil(firstItem.title, @"News item title should not be nil");
         XCTAssertNotNil(firstItem.publishedDate, @"News item published date should not be nil");
         XCTAssertNotNil(firstItem.imageURL, @"News item image URL should not be nil");
+    } @catch (NSException *exception) {
+        XCTFail(@"Exception occurred: %@", exception);
+    }
+}
+
+- (void)testLoadNewsFromInvalidJSONFile {
+    @try {
+        NSArray<NewsFeed *> *newsFeeds = [self.newsServiceWithInvalidJSON loadNewsFromJSONFile];
+        XCTAssertNotNil(newsFeeds, @"News items should not be nil");
+        XCTAssertEqual(newsFeeds.count, 0, @"News items count should be zero");
     } @catch (NSException *exception) {
         XCTFail(@"Exception occurred: %@", exception);
     }

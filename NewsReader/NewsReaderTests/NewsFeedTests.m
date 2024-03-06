@@ -2,7 +2,7 @@
 //  NewsFeedTests.m
 //  NewsReaderTests
 //
-//  Created by Aparna Vashishtha on 07/03/24.
+//  Created by Kshitij Gaur on 07/03/24.
 //
 
 #import <XCTest/XCTest.h>

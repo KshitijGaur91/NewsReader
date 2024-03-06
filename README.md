@@ -1,0 +1,2 @@
+# NewsReader
+News reader application
